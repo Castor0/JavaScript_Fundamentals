@@ -200,10 +200,87 @@ const obj = [{
 }];
 
 let newObj = obj.map((item) => {
-    return {
-        ign : item.ign,
-        rank : item.rank
-    };
+   return {
+    ign : item.ign,
+    rank : item.rank
+   }
+        
+   
 });
 
  console.log(newObj);
+
+// Array reduce() function
+const numArr = [1,3,6,7,9];
+
+const newNumArr = numArr.reduce((acc, item) =>{
+    return acc + item
+}, 0);
+console.log(newNumArr)
+
+
+
+const objArr = [{
+    ign : "Tenz",
+    item : "Gordrinker",
+    rank : 200
+},
+{
+    ign : "Xeppa",
+    item : "Black Cleaver",
+    rank : 150
+}];
+
+let newObjArr = objArr.reduce((ark, item) => {
+   return  ark + item.rank   
+}, 0)
+
+console.log(newObjArr)
+
+// Array Function filter()
+
+const letArr = [1,2,3,4,5,6,7];
+
+const result = letArr.filter((item) => {
+    return item % 2 === 0;
+})
+console.log(result)
+
+
+//Using filter() with Objects 
+const letObj = [{
+    ign : "Tenz",
+    item : "Gordrinker",
+    rank : 200
+},
+{
+    ign : "Xeppa",
+    item : "Black Cleaver",
+    rank : 150
+}];
+
+let newLetObj = letObj.filter((item) =>{
+        return item.rank <= 150;
+})
+
+console.log(newLetObj)
+
+
+// Array Functions find() and findIndex()
+
+const functionFInd = [-1,-3,-5,0,2,3,6];
+
+let findResult = functionFInd.find((item) =>{
+    return (item % 2 !== 0 && item >= 0) 
+});
+console.log(findResult);
+
+// findindex()
+
+const funcFind = [-1,-3,-4,0,1,2,5,6,7];
+
+let findFunc = funcFind.findIndex((data) =>{
+        return data % 2 ===0
+})
+
+console.log(findFunc)
