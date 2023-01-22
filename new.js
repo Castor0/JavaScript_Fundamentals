@@ -135,3 +135,75 @@ let mObj2 = {
 let mObj3 = {...mObj1, ...mObj2}
 
 console.log(mObj3);
+
+// Destructuring
+console.clear();
+const callSign = "Felis Navidad";
+const nameArr  = callSign.split(' ');
+console.log(nameArr);
+
+// spliting callSign
+let firstNames = nameArr[0];
+let lastNames = nameArr[1];
+
+
+console.log(firstNames);
+console.log(lastNames);
+
+//Simple Destructuring
+const tag = "Natsu Olivier Dragneel";
+const tagArr = tag.split(' ');
+
+console.log(tagArr);
+// sequebce matters in the arrangement of variables 
+let [firstTag, secondTag, lastTag] = tagArr;
+
+console.log(firstTag);
+console.log(secondTag);
+console.log(lastTag);
+
+//Destructuring Objects 
+const individual = {
+    firstTitle : "Lord",
+    rank : "Adamantine",
+    Age  : 28
+}
+// in destructuring objects, the sequence doesnt matter because we are using the same keywords used in the original object
+let {firstTitle, rank} = individual;
+
+console.log(firstTitle,);
+console.log(rank);
+
+
+// Array Functions: map()
+
+const arr = [1 ,2 ,3, 4, 5];
+
+let newArr = arr.map((item) => { 
+    return item -1;
+});
+
+console.clear();
+console.log(newArr);
+
+// map() with Objects 
+// objects always need to be placed in square brackets else an error wil be displayed 
+const obj = [{
+    ign : "Tenz",
+    item : "Gordrinker",
+    rank : 200
+},
+{
+    ign : "Xeppa",
+    item : "Black Cleaver",
+    rank : 150
+}];
+
+let newObj = obj.map((item) => {
+    return {
+        ign : item.ign,
+        rank : item.rank
+    };
+});
+
+ console.log(newObj);
